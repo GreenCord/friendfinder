@@ -1,9 +1,9 @@
-var friends = require('../app/data/friends.js');
+var friends = require('../data/friends');
 
 module.exports = function(app){
 	app
-		.get('/api/friends',(res,req)=>res.json(friends))
-		.post('/api/friends',(res,req)=>{
+		.get('/api/friends',(req,res)=>res.json(friends))
+		.post('/api/friends',(req,res)=>{
 			console.log('Post request received on /api/friends');
 		});
 };
