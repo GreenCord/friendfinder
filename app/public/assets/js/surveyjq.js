@@ -19,36 +19,29 @@ $(document).ready(function(){
 			if (data != null) {
 				console.log('Found a match');
 				console.log(JSON.stringify(data,null,2));
+				$('#matchname').text(data.name);
+				$('#matchphoto').empty();
+				$('#matchphoto').append($('<img>')
+					.attr('src',data.photo)
+					.attr('alt',data.name)
+					.addClass('img-responsive')
+					.addClass('center-block')
+					.addClass('img-thumbnail')
+					.attr('style','max-height:275px'));
+				$('#matchmodal').modal('show');
 			} else {
 				console.log('NO MATCH FOUND');
+				$('#matchname').text('Sorry, no match found.');
+				$('#matchphoto').empty();
+				$('#matchmodal').modal('show');
 			}
 
-			// $('#username').val('');
-			// $('#photo').val('');
-			// $(qs).each(function(){
-			// 	$('#'+this).find('option:first').attr('selected','selected');
-			// });
+			$('#username').val('');
+			$('#photo').val('');
+			$(qs).each(function(){
+				$('#'+this).find('option:first').attr('selected','selected');
+			});
 		});
 		
-		// $.ajax({
-		// 	url: '/api/friends',
-		// 	type: 'POST',
-		// 	data: answers,
-		// 	contentType: 'application/json; charset=utf-8',
-		// 	dataType: 'json'
-		// }).done(function(data){
-		// 	if (data != null) {
-		// 		console.log('Found a match');
-		// 	} else {
-		// 		console.log('NO MATCH FOUND');
-		// 	}
-
-		// 	$('#username').val('');
-		// 	$('#photo').val('');
-		// 	$(qs).each(function(){
-		// 		$('#'+this).find('option:first').attr('selected','selected');
-		// 	});
-		// });
-
 	});
 });
