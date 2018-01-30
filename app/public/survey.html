@@ -36,21 +36,26 @@
 <!-- form stuff -->
 	<div class="container">
 		<h1>Friend Finder &ndash; Survey Questions</h1>
+		<p id="form-error">&nbsp;</p>
 		<form action="POST">
 			<div class="row">
 				<div class="col-md-4">
 					<h5>About You</h5>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<label for="username">Name (required)</label>
 						<input type="text" class="form-control" id="username" placeholder="Type your name here...">
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="username-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="username-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<label for="photo">Link to Photo Image (required)</label>
-						<input type="text" class="form-control" id="photo" placeholder="Copy/paste the URL to your photo here...">
+						<input type="text" class="form-control" id="photo" placeholder="Photo URL - Include http:// or https://  ">
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="url-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="url-error" style="display: none;"></span>
 					</div>
 				</div>
 				<div class="col-md-8">
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 1</h5>
 						<label for="q1">Your mind is always buzzing with unexplored ideas and plans.</label>
 						<select id="q1" class="form-control">
@@ -61,8 +66,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q1-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q1-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 2</h5>
 						<label for="q2">Generally speaking, you rely more on your experience than your imagination.</label>
 						<select id="q2" class="form-control">
@@ -73,8 +80,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q2-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q2-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 3</h5>
 						<label for="q3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
 						<select id="q3" class="form-control">
@@ -85,8 +94,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q3-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q3-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 4</h5>
 						<label for="q4">You rarely do something just out of sheer curiosity.</label>
 						<select id="q4" class="form-control">
@@ -97,8 +108,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q4-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q4-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 5</h5>
 						<label for="q5">People can rarely upset you.</label>
 						<select id="q5" class="form-control">
@@ -109,8 +122,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q5-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q5-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 6</h5>
 						<label for="q6">It is often difficult for you to relate to other people’s feelings.</label>
 						<select id="q6" class="form-control">
@@ -121,8 +136,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q6-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q6-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 7</h5>
 						<label for="q7">In a discussion, truth should be more important than people’s sensitivities.</label>
 						<select id="q7" class="form-control">
@@ -133,8 +150,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q7-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q7-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 8</h5>
 						<label for="q8">You rarely get carried away by fantasies and ideas.</label>
 						<select id="q8" class="form-control">
@@ -145,8 +164,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q8-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q8-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 9</h5>
 						<label for="q9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
 						<select id="q9" class="form-control">
@@ -157,8 +178,10 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q9-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q9-error" style="display: none;"></span>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<h5>Question 10</h5>
 						<label for="q10">You feel more energetic after spending time with a group of people.</label>
 						<select id="q10" class="form-control">
@@ -169,6 +192,8 @@
 							<option value="4">4</option>
 							<option value="5">5 (Strongly Agree</option>
 						</select>
+						<span class="glyphicon glyphicon-ok form-control-feedback" id="q10-ok" style="display: none;"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback" id="q10-error" style="display: none;"></span>
 					</div>
 				</div>
 			</div>
